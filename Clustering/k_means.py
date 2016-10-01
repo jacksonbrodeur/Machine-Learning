@@ -1,6 +1,6 @@
 import random as rand
 from functools import reduce
-import math
+from point import Point
 
 canPlot = True
 try:
@@ -8,22 +8,6 @@ try:
 except:
     print("Install matplot lib to see clusters plotted\n")
     canPlot = False
-
-class Point:
-    """ Point class represents and manipulates x,y coords. """
-
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def __str__(self):
-        return "x: {}, y: {}".format(self.x, self.y)
-
-    def __repr__(self):
-        return str(self)
-
-    def distance(self, other):
-        return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
 
 def calculateMaxMin(dataPoints):
     maxX = reduce(lambda a,b: a if a.x > b.x else b, dataPoints, dataPoints[0])
