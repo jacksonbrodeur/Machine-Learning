@@ -7,7 +7,7 @@ class Point:
         self.y = y
 
     def __str__(self):
-        return "x: {}, y: {}".format(self.x, self.y)
+        return "(x: {}, y: {})".format(self.x, self.y)
 
     def __repr__(self):
         return str(self)
