@@ -26,7 +26,7 @@ with open('classification.txt', 'rb') as inputFile:
 dataPoints = np.append(np.ones([dataPoints.shape[0],1]), dataPoints, axis=1)
 parameters = np.random.rand(dataPoints.shape[1], 1) - 0.5
 
-iterations = range(0, 100)
+iterations = range(0, 7000)
 eta = 0.05
 
 for i in iterations:
